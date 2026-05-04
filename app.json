@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Volley Coach",
+    "slug": "volley-coach",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "volleycoach",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0F172A",
+    "splash": {
+      "backgroundColor": "#0F172A",
+      "resizeMode": "contain"
+    },
+    "android": {
+      "package": "com.volleycoach.app",
+      "backgroundColor": "#0F172A",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F172A"
+      },
+      "permissions": [
+        "VIBRATE",
+        "SCHEDULE_EXACT_ALARM",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.volleycoach.app",
+      "backgroundColor": "#0F172A"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "color": "#22D3EE"
+        }
+      ]
+    ]
+  }
+}

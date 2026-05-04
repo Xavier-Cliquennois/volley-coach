@@ -1,0 +1,43 @@
+node_modules/
+.expo/
+dist/
+web-build/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.tgz
+.DS_Store
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.log
+
+# Personal docs (not for public repo)
+docs/
+CLAUDE.md
+.claude/
+
+# Native build artifacts
+ios/
+android/build/
+android/app/build/
+android/.gradle/
+android/.kotlin/
+android/local.properties
+android/key.properties
+android/app/release/
+*.iml
+*.keystore
+
+# OS
+Thumbs.db
+
+# Misc
+coverage/
+.cache/
+*.tsbuildinfo
