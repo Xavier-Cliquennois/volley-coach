@@ -28,7 +28,7 @@ export default function Onboarding() {
   const start = async () => {
     await setPlanState(selected, 0);
     await rescheduleAll({ startDateIso: selected, weekOffset: 0, enabled: notifEnabled });
-    router.replace('/(tabs)');
+    router.replace('/');
   };
 
   return (

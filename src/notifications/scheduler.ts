@@ -98,7 +98,11 @@ export async function rescheduleAll({
         body: 'C\'est l\'heure de l\'entrainement. Ouvre l\'app pour demarrer.',
         data: { kind: 'session', date: occ.isoDate },
       },
-      trigger: trigger,
+      trigger: {
+        type: Notifications.SchedulableTriggerInputTypes.DATE,
+        date: trigger,
+        channelId: Platform.OS === 'android' ? 'default' : undefined,
+      },
     });
 
     if (occ.week && isTestWeek(occ.week) && occ.sessionType === 'A') {
@@ -110,7 +114,11 @@ export async function rescheduleAll({
             body: `Pense au CMJ, tractions max et pompes max avant la seance ${occ.sessionType}.`,
             data: { kind: 'tests', week: occ.week },
           },
-          trigger: reminderDate,
+          trigger: {
+            type: Notifications.SchedulableTriggerInputTypes.DATE,
+            date: reminderDate,
+            channelId: Platform.OS === 'android' ? 'default' : undefined,
+          },
         });
       }
     }
@@ -127,7 +135,11 @@ export async function rescheduleAll({
           body: 'Note ton poids dans l\'app pour suivre ton evolution.',
           data: { kind: 'weight' },
         },
-        trigger: trigger,
+        trigger: {
+          type: Notifications.SchedulableTriggerInputTypes.DATE,
+          date: trigger,
+          channelId: Platform.OS === 'android' ? 'default' : undefined,
+        },
       });
     }
   }

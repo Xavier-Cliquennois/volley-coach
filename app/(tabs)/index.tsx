@@ -41,7 +41,6 @@ export default function Today() {
   const loadData = useCallback(async () => {
     const plan = await getPlanState();
     if (!plan) {
-      router.replace('/onboarding');
       setPlanMissing(true);
       setPlanLoaded(true);
       return;
